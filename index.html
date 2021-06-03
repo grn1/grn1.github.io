@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lightning Fast, Easy To Use, Private &amp; Secure Grin Wallet for Windows, Linux and macOS - Grin++" />
+  <title>Fast, Private and Secure Grin Wallet - Grin++</title>
+  
+  <link rel="stylesheet" href="/assets/main.bundle.css">
+  <meta name="theme-color" content="#563d7c" />
+  <style>
+    @font-face {
+      font-family: 'Archivo Narrow';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Archivo Narro 700'), local('Archivo-Narrow-700'), url(font/archivo-narrow-700.ttf) format('truetype');
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-neutral-600 via-neutral-800 to-black text-white">
+  <div style="background-image: url('bg.svg')" class="bg-contain">
+    
+  <main class="container py-8">
+
+    <section class="flex md:hidden">
+      <img class="mx-auto mb-8" src="banner.png" alt="Grin++" style="max-width: 200px" />
+    </section>
+
+    <section>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h1 class="text-grin text-center md:text-left">The Most Popular GUI<br/>Wallet for Grin ツ</h1>
+          <h2 class="text-neutral-200 text-center md:text-left pt-0 pb-2">Fast. Private. Secure.</h2>
+          <p>
+            Grin++ is made to be secure, fast, and reliable. Your keys, your coins, all transactions are done via TOR.
+          </p>
+        </div>
+        <div>
+          <img class="hidden md:flex mx-auto mb-12" src="banner.png" alt="Grin++" style="max-width: 320px" />
+
+          <a class="transition transform rounded bg-grin block py-2 px-4 mx-4 text-center text-neutral-500 hover:text-black hover:shadow-grin active:shadow-grin active:translate-y-0.5" href="#download">
+            <span class="text-xl font-black">Download</span>
+            <span class="text-sm">v 1.2.5</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-16 md:mt-32">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="flex flex-row md:flex-col">
+          <div class="flex flex-none w-24 md:w-auto items-center justify-center ">
+            <img src="/svg/flash_on.svg" alt="" class="mx-auto w-16 md:w-32" />
+          </div>
+          <div class="md:text-center">
+            <h2>Lightning Fast</h2>
+            <p>
+              Send &amp; receive instantly. Restore wallets in seconds. Node fully syncs in minutes.
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex flex-row md:flex-col">
+          <div class="flex flex-none w-24 md:w-auto items-center justify-center ">
+            <img src="/svg/mood.svg" alt="" class="mx-auto w-16 md:w-32" />
+          </div>
+          <div class="md:text-center">
+            <h2>Easy To Use</h2>
+            <p>
+              Transact via file, http(s), or TOR. 100% compatible with grin-wallet. No port forwarding required.
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex flex-row md:flex-col">
+          <div class="flex flex-none w-24 md:w-auto items-center justify-center ">
+            <img src="/svg/cloud_queue.svg" alt="" class="mx-auto w-16 md:w-32" />
+          </div>
+          <div class="md:text-center">
+            <h2>Highly Scalable</h2>
+            <p>
+              Ultra-modular design. Powerful multi-user wallet. Adjustable caching.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="mt-16 md:mt-32 -mx-8 md:mx-0" x-data="{selected:'desktop'}">
+      <div class="grid grid-cols-2 gap-8">
+        <div
+          @click="selected = 'desktop'"
+          class="text-center cursor-pointer">
+          <span
+            :class="{ 'border-b-4': selected === 'desktop' }"
+            class="font-bold border-grin py-2 px-4">
+            Desktop
+          </span>
+        </div>
+        <div
+          @click="selected = 'mobile'"
+          class="text-center cursor-pointer">
+          <span
+            :class="{ 'border-b-4': selected === 'mobile' }"
+            class="font-bold border-grin py-2 px-4">
+            Mobile
+          </span>
+        </div>
+      </div>
+
+      <div x-show="selected === 'desktop'">
+        <div class="swiper-container w-full">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/desktop/grinpp_wallet.png" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Wallet</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/desktop/grinpp_init.png" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Initialize</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/desktop/grinpp_create_account.png" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Create an Account</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/desktop/grinpp_create_wallet.png" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Create a Wallet</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/desktop/grinpp_send_coins.png" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Send Coins</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/desktop/grinpp_receive_coins.png" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Receive Coins</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/desktop/grinpp_console.png" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Console</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/desktop/grinpp_help.png" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Help</h4>
+                  </div>
+              </div>
+              
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+      <div x-show="selected === 'mobile'">
+        <div class="swiper-container w-full">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/mobile/sync.jpeg" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Sync</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/mobile/wallets.jpeg" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Wallets</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/mobile/balance.jpeg" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Balance</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/mobile/send.jpeg" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Send</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/mobile/receive.jpeg" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Receive</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/mobile/transactions.jpeg" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Transactions</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/mobile/address.jpeg" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Address</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/mobile/settings.jpeg" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Settings</h4>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide p-16 flex items-center justify-center">
+                  <div class="flex flex-col">
+                    <img class="border border-gray-500" src="/screenshots/mobile/console.jpeg" alt="" style="max-height: 460px" />
+                    <h4 class="text-center mt-2 mb-8">Console</h4>
+                  </div>
+              </div>
+              
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-center mb-4">Features</h2>
+      <div class="grid grid-cols-12">
+        <div class="col-start-1 col-span-12 lg:col-start-4 lg:col-span-6">
+          <div class="grid grid-cols-1 gap-4">
+            
+            <div class="flex flex-row">
+              <div class="flex flex-none w-16">
+                
+    <i>
+        <svg class="text-grin fill-current text-current w-8 mt-2" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
+    </i>
+
+              </div>
+              <div>
+                <h3>Multiplatform</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Support for most common operating systems. Windows, Linux, MacOS and Android are supported at the moment.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex flex-row">
+              <div class="flex flex-none w-16">
+                
+    <i>
+        <svg class="text-grin fill-current text-current w-8 mt-2" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
+    </i>
+
+              </div>
+              <div>
+                <h3>Secure</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  AES w/scrypt encryption to protect your coins and privacy are implemented. Also, passwords never stored in memory. 
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex flex-row">
+              <div class="flex flex-none w-16">
+                
+    <i>
+        <svg class="text-grin fill-current text-current w-8 mt-2" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
+    </i>
+
+              </div>
+              <div>
+                <h3>Coin Control</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Control how you spend the coins in your wallet when sending a transaction. You can choose what addresses will be the ones sending the coins and which of the coins you have received will be used.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex flex-row">
+              <div class="flex flex-none w-16">
+                
+    <i>
+        <svg class="text-grin fill-current text-current w-8 mt-2" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
+    </i>
+
+              </div>
+              <div>
+                <h3>Multi-User</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  With Grin++ you can create multiple accounts separately. A crypto wallet works just like a bank account where we can store the transactions made, can use to send and receive digital currency.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex flex-row">
+              <div class="flex flex-none w-16">
+                
+    <i>
+        <svg class="text-grin fill-current text-current w-8 mt-2" viewBox="0 0 20 20"><path d="M0 11l2-2 5 5L18 3l2 2L7 18z"/></svg>
+    </i>
+
+              </div>
+              <div>
+                <h3>Multi-Language</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  With users worldwide, Grin++ is available in 15 different languages. Turkish, Russian, Chinese and more.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-16 md:mt-32">
+      <div class="grid grid-cols-6">
+        <div class="col-start-1 col-span-6 lg:col-start-2 lg:col-span-4">
+          <h2>
+            Security Audit.
+            <span class="text-neutral-300">+26k lines of code were audited.</span>
+          </h2>
+          <p class="text-justify">
+            A community funded <a class="text-grin" href="/SmartDec%20Grin%2B%2B%20Security%20Audit.pdf">Security Audit</a> was performed by <a class="text-grin" href="https://smartdec.com/">SmartDec</a>. The task was to find and describe security issues in the code base of the platform. The code was completely manually analyzed taking into consideration the Mimblewimble protocol specification and the C++ source code. Recommendations were properly followed and critical issues mitigated.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="mt-16 md:mt-32">
+      <div class="grid grid-cols-6 gap-4">
+        <div class="col-start-1 col-span-6">
+          <h2 class="text-center mb-8">Download Grin++</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="text-center mb-4">
+              <img class="mx-auto" src="/images/windows.png" alt="" />
+              <h3 class="text-center mt-2">Windows</h3>
+              <div class="p-4">
+                <a class="border transition text-white border-white hover:text-grin hover:border-grin rounded py-2 px-4" href="https://github.com/GrinPlusPlus/GrinPlusPlus/releases/download/v1.2.5/GrinPlusPlus-Setup-1.2.5.exe">Download</a>
+              </div>
+              <div class="mx-8 text-sm text-neutral-300">Windows 7 or later (64 bit only)</div>
+            </div>
+            
+            <div class="text-center mb-4">
+              <img class="mx-auto" src="/images/linux.png" alt="" />
+              <h3 class="text-center mt-2">Linux</h3>
+              <div class="p-4">
+                <a class="border transition text-white border-white hover:text-grin hover:border-grin rounded py-2 px-4" href="https://github.com/GrinPlusPlus/GrinPlusPlus/releases/download/v1.2.5/GrinPlusPlus-1.2.5.AppImage">Download</a>
+              </div>
+              <div class="mx-8 text-sm text-neutral-300">Ubuntu 16.04.2+, Debian 10+ (64 bit only)</div>
+            </div>
+            
+            <div class="text-center mb-4">
+              <img class="mx-auto" src="/images/apple.png" alt="" />
+              <h3 class="text-center mt-2">macOS</h3>
+              <div class="p-4">
+                <a class="border transition text-white border-white hover:text-grin hover:border-grin rounded py-2 px-4" href="https://github.com/GrinPlusPlus/GrinPlusPlus/releases/download/v1.2.5/GrinPlusPlus-1.2.5.dmg">Download</a>
+              </div>
+              <div class="mx-8 text-sm text-neutral-300">macOS High Sierra (10.13) or later (64 bit only)</div>
+            </div>
+            
+            <div class="text-center mb-4">
+              <img class="mx-auto" src="/images/android.png" alt="" />
+              <h3 class="text-center mt-2">Android</h3>
+              <div class="p-4">
+                <a class="border transition text-white border-white hover:text-grin hover:border-grin rounded py-2 px-4" href="https://play.google.com/store/apps/details?id=com.grinplusplus.mobile">Download</a>
+              </div>
+              <div class="mx-8 text-sm text-neutral-300">Android 9 or later (64 bit only)</div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-16 md:mt-32">
+      <h2 class="text-center">FAQ</h2>
+      <ul class="block md:w-11/12 my-4 mx-auto" x-data="{selected:null}">
+        
+        <li class="flex align-center flex-col mb-1">
+          <h4
+            @click="selected !== 1 ? selected = 1 : selected = null"
+            class="cursor-pointer px-5 py-3 bg-neutral-800 text-white text-left inline-block hover:-mb-3 flex flex-row">
+            <div class="flex-grow">
+              What is Grin?
+            </div>
+            <div
+              :class="{ 'rotate-90': selected === 1 }"
+              class="transform transition-transform flex-grow-0">
+              
+    <i>
+        <svg class="text-grin fill-current text-current w-8 h-8" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+    </i>
+
+            </div>
+          </h4>
+          <p
+            x-show="selected == 1"
+            class="bg-white text-neutral-900 p-4">
+            Grin is a privacy-preserving digital currency built openly by developers distributed all over the world.
+          </p>
+        </li>
+        
+        <li class="flex align-center flex-col mb-1">
+          <h4
+            @click="selected !== 2 ? selected = 2 : selected = null"
+            class="cursor-pointer px-5 py-3 bg-neutral-800 text-white text-left inline-block hover:-mb-3 flex flex-row">
+            <div class="flex-grow">
+              Can I contribute?
+            </div>
+            <div
+              :class="{ 'rotate-90': selected === 2 }"
+              class="transform transition-transform flex-grow-0">
+              
+    <i>
+        <svg class="text-grin fill-current text-current w-8 h-8" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+    </i>
+
+            </div>
+          </h4>
+          <p
+            x-show="selected == 2"
+            class="bg-white text-neutral-900 p-4">
+            ...
+          </p>
+        </li>
+        
+        <li class="flex align-center flex-col mb-1">
+          <h4
+            @click="selected !== 3 ? selected = 3 : selected = null"
+            class="cursor-pointer px-5 py-3 bg-neutral-800 text-white text-left inline-block hover:-mb-3 flex flex-row">
+            <div class="flex-grow">
+              Why C++?
+            </div>
+            <div
+              :class="{ 'rotate-90': selected === 3 }"
+              class="transform transition-transform flex-grow-0">
+              
+    <i>
+        <svg class="text-grin fill-current text-current w-8 h-8" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+    </i>
+
+            </div>
+          </h4>
+          <p
+            x-show="selected == 3"
+            class="bg-white text-neutral-900 p-4">
+            ...
+          </p>
+        </li>
+        
+      </ul>
+    </section>
+
+    <section class="mt-16 md:mt-32">
+      <h2 class="text-center mb-4">Timeline</h2>
+      <div class="grid grid-cols-12">
+        <div class="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8">
+          <div class="ml-12 md:ml-0 grid grid-cols-1 md:grid-cols-2">
+            
+            <div class="pr-12 pb-10 hidden md:block">
+              
+            </div>
+            <div class="relative pl-16 pb-10 border-l-2 border-grin pt-8">
+              <div class="absolute z-10 -ml-28 mt-3">
+                <div class="w-24 rounded rounded-full bg-grin text-black text-center p-2" style="margin-left: -1px">
+                  2018/12
+                </div>
+              </div>
+              
+              
+              <div>
+                <h3>Open-source the in-progress code</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks. Longer text would fill the gap.
+                </p>
+              </div>
+              
+              
+            </div>
+            
+            <div class="pr-12 pb-10 hidden md:block">
+              
+              <div>
+                <h3>Beta release of the Grin++ node</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks
+                </p>
+              </div>
+              
+            </div>
+            <div class="relative pl-16 pb-10 border-l-2 border-grin">
+              <div class="absolute z-10 -ml-28 mt-3">
+                <div class="w-24 rounded rounded-full bg-grin text-black text-center p-2" style="margin-left: -1px">
+                  2019/02
+                </div>
+              </div>
+              
+              <div class="block md:hidden">
+                <h3>Beta release of the Grin++ node</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks
+                </p>
+              </div>
+              
+              
+              
+            </div>
+            
+            <div class="pr-12 pb-10 hidden md:block">
+              
+            </div>
+            <div class="relative pl-16 pb-10 border-l-2 border-grin">
+              <div class="absolute z-10 -ml-28 mt-3">
+                <div class="w-24 rounded rounded-full bg-grin text-black text-center p-2" style="margin-left: -1px">
+                  2019/03
+                </div>
+              </div>
+              
+              
+              <div>
+                <h3>Beta release of the Grin++ wallet (floonet-only)</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks. Longer text would fill the gap.
+                </p>
+              </div>
+              
+              
+            </div>
+            
+            <div class="pr-12 pb-10 hidden md:block">
+              
+              <div>
+                <h3>Grinbox &amp; HTTP support</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks. Longer text would fill the gap.
+                </p>
+              </div>
+              
+            </div>
+            <div class="relative pl-16 pb-10 border-l-2 border-grin">
+              <div class="absolute z-10 -ml-28 mt-3">
+                <div class="w-24 rounded rounded-full bg-grin text-black text-center p-2" style="margin-left: -1px">
+                  2019/04
+                </div>
+              </div>
+              
+              <div class="block md:hidden">
+                <h3>Grinbox &amp; HTTP support</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks. Longer text would fill the gap.
+                </p>
+              </div>
+              
+              
+              
+            </div>
+            
+            <div class="pr-12 pb-10 hidden md:block">
+              
+            </div>
+            <div class="relative pl-16 pb-10 border-l-2 border-grin">
+              <div class="absolute z-10 -ml-28 mt-3">
+                <div class="w-24 rounded rounded-full bg-grin text-black text-center p-2" style="margin-left: -1px">
+                  2019/06
+                </div>
+              </div>
+              
+              
+              <div>
+                <h3>Mac &amp; Linux support</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks. Longer text would fill the gap.
+                </p>
+              </div>
+              
+              
+            </div>
+            
+            <div class="pr-12 pb-10 hidden md:block">
+              
+              <div>
+                <h3>GrinJoin support</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks. Longer text would fill the gap.
+                </p>
+              </div>
+              
+            </div>
+            <div class="relative pl-16 pb-10 border-l-2 border-grin">
+              <div class="absolute z-10 -ml-28 mt-3">
+                <div class="w-24 rounded rounded-full bg-grin text-black text-center p-2" style="margin-left: -1px">
+                  2019/08
+                </div>
+              </div>
+              
+              <div class="block md:hidden">
+                <h3>GrinJoin support</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks. Longer text would fill the gap.
+                </p>
+              </div>
+              
+              
+              
+            </div>
+            
+            <div class="pr-12 pb-10 hidden md:block">
+              
+            </div>
+            <div class="relative pl-16 pb-10 border-l-2 border-grin">
+              <div class="absolute z-10 -ml-28 mt-3">
+                <div class="w-24 rounded rounded-full bg-grin text-black text-center p-2" style="margin-left: -1px">
+                  2019/09
+                </div>
+              </div>
+              
+              
+              <div>
+                <h3>Support sending/receiving transactions over a built-in i2p client &amp; router</h3>
+                <p class="text-neutral-200 max-w-prose">
+                  Description would be nice to have, for better looks. Longer text would fill the gap.
+                </p>
+              </div>
+              
+              
+              <div class="absolute -bottom-6 -ml-20 w-8 overflow-hidden inline-block">
+                <div style="margin-left: -2px" class="h-6 w-6 bg-grin -rotate-45 transform origin-top-left"></div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-16 md:mt-32">
+      <div class="grid grid-cols-6">
+        <div class="col-start-1 col-span-6 lg:col-start-2 lg:col-span-4">
+          <h2>
+            Grin ツ
+            <span class="text-neutral-300">The privacy-preserving digital currency.</span>
+          </h2>
+          <p class="text-justify">
+            Grin is a lightweight implementation of the Mimblewimble protocol. The main goal and characteristics of the Grin project are: Privacy, Scalability, Simplicity, Cryptography and Decentralization. All outputs in Grin are unique and have no common data with any previous output. Instead of relying on a known address to send money, transactions have to be built interactively, with two (or more) wallets exchanging data with one another. This interaction does not require both parties to be online at the same time. Grin wants to be usable for everyone — regardless of borders, culture, skills or access.
+          </p>
+          <p class="mt-4">
+            To know more about about Grin, please visit <a class="text-grin" href="https://grin.mw">https://grin.mw</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-16 md:mt-32">
+      <div class="grid grid-cols-6 gap-4">
+        <div class="col-start-1 col-span-6">
+          <h2 class="text-center mb-8">Support Grin++</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="text-center mb-4">
+              <img class="mx-auto" src="/images/bitcoin-icon.png" alt="" />
+              <div class="p-4">
+                <a class="border transition text-white border-white hover:text-grin hover:border-grin rounded py-2 px-4" href="/images/donate-icon.png">Donate</a>
+              </div>
+              <div class="mx-8 text-sm text-neutral-300 break-words">bitcoin: 3G39h3G7HneymYL4kdgkDFLoB9uQ536Cw1</div>
+            </div>
+            
+            <div class="text-center mb-4">
+              <img class="mx-auto" src="/images/coding-icon.png" alt="" />
+              <div class="p-4">
+                <a class="border transition text-white border-white hover:text-grin hover:border-grin rounded py-2 px-4" href="https://github.com/GrinPlusPlus">Code</a>
+              </div>
+              <div class="mx-8 text-sm text-neutral-300 break-words">Contribute to one of our open-source projects on Github</div>
+            </div>
+            
+            <div class="text-center mb-4">
+              <img class="mx-auto" src="/images/shopping-icon.png" alt="" />
+              <div class="p-4">
+                <a class="border transition text-white border-white hover:text-grin hover:border-grin rounded py-2 px-4" href="https://shop.grinplusplus.com/">Shop</a>
+              </div>
+              <div class="mx-8 text-sm text-neutral-300 break-words">Support the project by buying some Grin++ swag</div>
+            </div>
+            
+            <div class="text-center mb-4">
+              <img class="mx-auto" src="/images/telegram.png" alt="" />
+              <div class="p-4">
+                <a class="border transition text-white border-white hover:text-grin hover:border-grin rounded py-2 px-4" href="https://t.me/GrinPP">Community</a>
+              </div>
+              <div class="mx-8 text-sm text-neutral-300 break-words">Learn from others and help others on our Telegram channel</div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="footer bg-neutral-700 text-neutral-300 mt-16">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 pt-4 pb-8">
+
+      <div>
+        <h3>About</h3>
+        <p>
+          Grin++ has been originally developed by David Burkett as an alternative node and wallet implementation in C++ for the Grin/Mimblewimble protocol. Later, David Tavarez joined and built a full node mobile wallet based on Grin++.
+        </p>
+      </div>
+
+      <div>
+        <h3>Contributors</h3>
+        <ul class="ml-4 list-disc">
+          
+          <li>David Burkett</li>
+          
+          <li>David Tavarez</li>
+          
+          <li>...</li>
+          
+          <li>You?</li>
+          
+        </ul>
+      </div>
+
+      <div>
+        <h3>Links</h3>
+        <ul class="list-none">
+          
+          <li>
+            <a class="text-neutral-300 hover:text-grin" href="https://github.com/GrinPlusPlus">
+              Grin++ at Github
+            </a>
+          </li>
+          
+          <li>
+            <a class="text-neutral-300 hover:text-grin" href="https://github.com/GrinPlusPlus/GrinPlusPlus/wiki">
+              Grin++ Wiki
+            </a>
+          </li>
+          
+          <li>
+            <a class="text-neutral-300 hover:text-grin" href="https://t.me/GrinPP">
+              Grin++ on Telegram
+            </a>
+          </li>
+          
+          <li>
+            <a class="text-neutral-300 hover:text-grin" href="https://forum.grin.mw">
+              Grin forum on grin.mw
+            </a>
+          </li>
+          
+        </ul>
+
+      </div> 
+
+    </div>
+  </div>
+</footer>
+
+  </div>
+</body>
+<script src="/assets/main.bundle.js" defer></script>
+</html>

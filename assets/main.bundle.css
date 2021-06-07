@@ -681,10 +681,6 @@ p a:hover, .footer a {
   --tw-gradient-to: #000;
 }
 
-.bg-contain {
-  background-size: contain;
-}
-
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity));
@@ -997,10 +993,6 @@ p a:hover, .footer a {
 
 .fill-current {
   fill: currentColor;
-}
-
-.text-left {
-  text-align: left;
 }
 
 .text-center {
